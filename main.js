@@ -4,7 +4,7 @@ const MinutesEl = document.getElementById('minutes');
 const SecondsEl = document.getElementById('seconds');
 
 
-const birthDay = '11 Oct 2020';
+const birthDay = '01 Dec 2020';
 
 function countDown(){
 	const birthDayDate = new Date(birthDay);
@@ -21,10 +21,6 @@ function countDown(){
 	HoursEl.innerHTML = format(hours);
 	MinutesEl.innerHTML = format(minutes);
 	SecondsEl.innerHTML = format(seconds);
-	if(new Date() === birthDay)
-	{
-		document.getElementById('afterBirthDay').innerHTML = `Happy BirthDay Danish😎🥳 One more year has been past🥱.`;
-	}
 }
 
 function format(time){
@@ -32,7 +28,5 @@ function format(time){
 }
 
 countDown(); 
-
-
 
 setInterval(countDown,1000);
